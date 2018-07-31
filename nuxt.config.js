@@ -32,7 +32,8 @@ module.exports = {
   ** Customize router
   */
   router: {
-    linkActiveClass: 'is-active'
+    linkActiveClass: 'is-active',
+    base: '/landingpage/'
   },
   /*
   ** Global CSS
