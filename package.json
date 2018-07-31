@@ -16,6 +16,8 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.3.1",
+    "axios": "^0.18.0",
     "nuxt": "^1.0.0",
     "push-dir": "^0.4.1",
     "vue-static-terminal": "^1.0.2"

@@ -32,8 +32,7 @@ module.exports = {
   ** Customize router
   */
   router: {
-    linkActiveClass: 'is-active',
-    base: '/landingpage/'
+    linkActiveClass: 'is-active'
   },
   /*
   ** Global CSS
@@ -52,7 +51,8 @@ module.exports = {
         '~/assets/mixins/*'
       ]
     ],
-    ['nuxt-buefy', { css: false, materialDesignIcons: true }]
+    ['nuxt-buefy', { css: false, materialDesignIcons: true }],
+    '@nuxtjs/axios'
   ],
   /*
   * Load Plugins and Components
@@ -61,6 +61,12 @@ module.exports = {
     '~/plugins/global.js',
     {src: '~plugins/termynal', ssr: false}
   ],
+  /*
+  *  axios configuration
+  */
+  axios: {
+    // proxyHeaders: false
+  },
   /*
   ** Build configuration
   */
