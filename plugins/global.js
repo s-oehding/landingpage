@@ -7,3 +7,4 @@ import TerminalWindow from '../components/terminal/TerminalWindow'
 Vue.component('AppLogo', AppLogo)
 Vue.component('NavBar', NavBar)
 Vue.component('TerminalWindow', TerminalWindow)
+

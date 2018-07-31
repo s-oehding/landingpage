@@ -50,7 +50,9 @@ module.exports = {
   * Load Plugins and Components
   */
   plugins: [
-    '~/plugins/global.js'
+    '~/plugins/global.js',
+    // disable ssr on typer component to fix document not defined error. See: https://github.com/cngu/vue-typer/issues/1
+    '~/plugins/vue-typed-js.js'
   ],
   /*
   ** Build configuration
