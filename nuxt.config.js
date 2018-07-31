@@ -51,8 +51,7 @@ module.exports = {
   */
   plugins: [
     '~/plugins/global.js',
-    // disable ssr on typer component to fix document not defined error. See: https://github.com/cngu/vue-typer/issues/1
-    '~/plugins/vue-typed-js.js'
+    {src: '~plugins/termynal', ssr: false}
   ],
   /*
   ** Build configuration
