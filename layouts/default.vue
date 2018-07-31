@@ -13,11 +13,11 @@
             The PhraseApp CLI tool lets you navigate your projects and translations quickly from the
             command line instead of fiddling around with long curl requests.
           </h2>
+          <br>
+          <TerminalWindow></TerminalWindow>
         </div>
       </div>
     </section>
-
-
 
     <div>
       <nuxt/>
