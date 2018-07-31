@@ -58,8 +58,9 @@
   }
   .terminal-window {
     text-align: left;
-    width: 680px;
-    height: 400px;
+    width: 100%;
+    height: 600px;
+    overflow-x: scroll;
     border-radius: 10px;
     margin: auto;
     position: relative;
@@ -95,7 +96,7 @@
         padding: 10px;
         box-sizing: border-box;
         position: absolute;
-        width: 100%;
+        width: 100% !important;
         top: 30px;
         bottom: 0;
         overflow: auto;
@@ -114,6 +115,14 @@
         -moz-animation: blink 0.7s infinite;
         animation: blink 0.7s infinite;
       }
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    .terminal-window {
+      width: 680px;
+      height: 400px;
+      overflow-x: auto;
     }
   }
 
