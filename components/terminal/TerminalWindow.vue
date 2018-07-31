@@ -5,37 +5,24 @@
       <div class="window-button is-round window-button--yellow"></div>
       <div class="window-button is-round window-button--red"></div>
     </header>
-    <section class="terminal">
-      <no-ssr>
-        <vue-typed-js
-          :strings="strings[index]"
-          :contentType="'html'"
-          @onComplete="updateIndex()">
-          <code class="typing"></code>
-        </vue-typed-js>
-      </no-ssr>
+    <section id="termynal" data-termynal data-ty-typeDelay="40" data-ty-lineDelay="700" class="terminal">
+      <span data-ty="input">phraseapp pull</span>
+      <span data-ty="progress"></span>
+      <span data-ty>Downloaded <span class="green">en</span> to <span class="green">config/locales/en.yml</span></span>
+      <br>
+      <span data-ty="input">phraseapp push</span>
+      <span data-ty>Uploading <span class="green">config/locales/en.yml</span></span>
+      <span data-ty="progress"></span>
+      <span data-ty>Uploaded <span class="green">config/locales/en.yml</span> successfully.</span>
     </section>
   </div>
 </template>
 
 <script>
+
   export default {
     data() {
       return {
-        strings: [
-          [
-            'npm install ^1000 \n\
-            installing components... ^1000 \n \
-            Fetching from source...'
-          ],
-          [
-            '$ phraseapp push ^1000',
-            '  Uploading config/locales/en.yml ^1000',
-            '  <span class="green">config/locales/en.yml</span> successfully'
-          ]
-        ],
-        index: 0,
-        history: '$'
       }
     },
 
@@ -46,11 +33,29 @@
           this.index = 0
         }
       }
+    },
+    mounted () {
+    },
+    created() {
+      if (process.browser) {
+        let termynalScript = document.createElement('script')
+        termynalScript.setAttribute('src', 'termynal.js')
+        termynalScript.setAttribute('data-termynal-container', '#termynal')
+        document.body.appendChild(termynalScript)
+      }
     }
   }
 </script>
 
 <style lang="scss">
+  .typed-element {
+    display: inline-block !important;
+    white-space: pre;
+  }
+  .typing {
+    display: inline-block !important;
+    white-space: pre;
+  }
   .terminal-window {
     text-align: left;
     width: 680px;
@@ -95,6 +100,9 @@
         bottom: 0;
         overflow: auto;
         white-space: pre;
+        .typed-element {
+          white-space: pre;
+        }
         .green {
           color: greenyellow;
         }
