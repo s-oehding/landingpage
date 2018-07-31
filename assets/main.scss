@@ -1,0 +1,15 @@
+@import '~bulma/sass/utilities/_all.sass';
+
+@import "variables";
+
+@import "~bulma/bulma";
+
+@import "./helpers";
+
+
+.page-enter-active, .page-leave-active {
+  transition: opacity .5s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+}
