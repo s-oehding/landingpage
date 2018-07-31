@@ -2,7 +2,7 @@
   <section class="container">
     <div class="columns">
       <div class="column">
-        <h3 class="title is-3 is-regular">From our Blog</h3>
+        <h3 class="title is-3 is-regular has-text-centered-touch">From our Blog</h3>
       </div>
     </div>
     <div class="columns is-centered" style="padding: 2rem">
