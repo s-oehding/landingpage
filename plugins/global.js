@@ -7,8 +7,8 @@ import FooterMain from '../components/layout/FooterMain'
 
 import TerminalWindow from '../components/terminal/TerminalWindow'
 
-import PostList from '~/components/postList/Postlist'
-import PostListItem from '~/components/postList/PostlistItem'
+import PostList from '~/components/postList/PostList'
+import PostListItem from '~/components/postList/PostListItem'
 
 Vue.component('AppLogo', AppLogo)
 Vue.component('NavBar', NavBar)
