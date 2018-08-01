@@ -1,6 +1,6 @@
 <template>
   <article class="column">
-    <div v-if="post" class="card">
+    <div v-if="post" class="card post-list-item">
       <div class="card-image">
         <figure class="image">
           <img :src="post._embedded['wp:featuredmedia']['0'].source_url" :alt="post._embedded['wp:featuredmedia']['0'].title.rendered">
@@ -10,14 +10,18 @@
         <div class="media">
           <div class="media-content">
             <p class="title is-4"> {{ post.title.rendered }}</p>
-            <p class="subtitle is-6">@{{ post._embedded.author.name}}</p>
+            <p class="subtitle is-6">
+              <a :href="post._embedded.author[0].link">
+                @{{ post._embedded.author[0].name }}
+              </a>
+            </p>
           </div>
         </div>
 
         <div class="content">
-          <div v-html="post.content.rendered.substr(0, 150) + '...'"></div>
+          <div v-html="post.excerpt.rendered"></div>
           <br>
-          <a class="button">
+          <a :href="post._embedded.author[0].link" class="button">
             <span>Learn more</span>
             <b-icon icon="play"></b-icon>
           </a>
@@ -52,5 +56,15 @@
 </script>
 
 <style lang="scss">
+  .card {
+    &.post-list-item {
+      height: 100%;
 
+      .card-content {
+        .title {
+          height: 85px;
+        }
+      }
+    }
+  }
 </style>
