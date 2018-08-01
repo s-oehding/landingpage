@@ -34,7 +34,7 @@ module.exports = {
   */
   router: {
     linkActiveClass: 'is-active',
-    base: routerBase
+    base: '/landingpage/'
   },
   /*
   ** Global CSS
