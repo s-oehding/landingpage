@@ -1,9 +1,10 @@
 // only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/landingpage/'
-  }
-} : {}
+let routerBase = ''
+if (process.env.DEPLOY_ENV === 'GH_PAGES')  {
+  routerBase = 'landingpage'
+} else {
+  routerBase = ''
+}
 
 module.exports = {
   /*
@@ -32,7 +33,8 @@ module.exports = {
   ** Customize router
   */
   router: {
-    linkActiveClass: 'is-active'
+    linkActiveClass: 'is-active',
+    base: routerBase
   },
   /*
   ** Global CSS
