@@ -1,7 +1,7 @@
 // only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
 let routerBase = ''
 if (process.env.DEPLOY_ENV === 'GH_PAGES')  {
-  routerBase = 'landingpage'
+  routerBase = '/landingpage/'
 } else {
   routerBase = ''
 }
