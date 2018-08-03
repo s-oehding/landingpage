@@ -23,6 +23,7 @@
     "vue-static-terminal": "^1.0.2"
   },
   "devDependencies": {
+    "@pxlwrx/vue-terminal": "^0.1.0",
     "babel-eslint": "^8.2.1",
     "buefy": "^0.6.6",
     "bulma": "^0.7.1",

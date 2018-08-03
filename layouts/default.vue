@@ -14,8 +14,12 @@
             command line instead of fiddling around with long curl requests.
           </h2>
           <br>
-          <no-ssr placeholder="loading...">
-            <TerminalWindow></TerminalWindow>
+          <no-ssr>
+            <VueTerminal
+              class=""
+              :lines="lines"
+              :add-styled-markup=true
+            ></VueTerminal>
           </no-ssr>
         </div>
       </div>
@@ -29,15 +33,27 @@
   </div>
 </template>
 
+<script>
+
+  export default {
+    data () {
+      return {
+        lines: [
+          {type: 'input', content: '$ phraseapp pull'},
+          {type: 'progress'},
+          {type: 'printLine', content: '  Downloaded <span class="green">en</span> to <span class="green">config/locales/en.yml'},
+          {type: 'input', content: '$ phraseapp push'},
+          {type: 'printLine', content: 'Uploading <span class="green">config/locales/en.yml</span>'},
+          {type: 'progress'},
+          {type: 'printLine', content: '  Uploaded <span class="green">config/locales/en.yml</span> successfully'},
+        ]
+      }
+    }
+  }
+</script>
+
 <style>
 html {
   font-family: "Source Sans Pro", sans-serif;
 }
 </style>
-
-<script>
-  export default {
-
-  }
-</script>
-

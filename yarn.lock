@@ -102,6 +102,12 @@
     mustache "^2.3.0"
     stack-trace "0.0.10"
 
+"@pxlwrx/vue-terminal@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@pxlwrx/vue-terminal/-/vue-terminal-0.1.0.tgz#e5070fe23e276e1e6aead7de0dfbb0f034f414c3"
+  dependencies:
+    vue "^2.5.16"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -6632,6 +6638,10 @@ vue-typer@^1.2.0:
 vue@^2.5.13:
   version "2.5.16"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.16.tgz#07edb75e8412aaeed871ebafa99f4672584a0085"
+
+vue@^2.5.16:
+  version "2.5.17"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.17.tgz#0f8789ad718be68ca1872629832ed533589c6ada"
 
 vuex@^3.0.1:
   version "3.0.1"

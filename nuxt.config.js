@@ -60,8 +60,7 @@ module.exports = {
   * Load Plugins and Components
   */
   plugins: [
-    '~/plugins/global.js',
-    {src: '~plugins/termynal', ssr: false}
+    '~/plugins/global.js'
   ],
   /*
   *  axios configuration
