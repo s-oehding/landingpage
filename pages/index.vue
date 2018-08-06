@@ -108,7 +108,6 @@ export default {
   async mounted(){
     if(!this.temp) {
       this.posts = await axios.get(`https://phraseapp.com/blog/wp-json/wp/v2/posts/?per_page=3&_embed`)
-      console.log(this.posts)
     }
   }
 }
