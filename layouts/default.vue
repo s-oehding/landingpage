@@ -1,10 +1,10 @@
 <template>
   <div id="page-wrapper">
-    <section class="hero is-primary is-large is-bold" style="margin-bottom: 9rem;">
+    <section class="hero is-primary is-large is-bold">
       <div class="hero-head">
         <NavBar></NavBar>
       </div>
-      <div class="hero-body" style="padding-bottom: 0; padding-top: 9rem; margin-bottom: -9rem;">
+      <div class="hero-body">
         <div class="container has-text-centered" style=" max-width: 800px;">
           <h1 class="title">
             <span style="font-weight: lighter;">Great command line with </span><strong>PhraseApp CLI</strong>
@@ -52,8 +52,32 @@
   }
 </script>
 
-<style>
+<style lang="scss">
 html {
   font-family: "Source Sans Pro", sans-serif;
 }
+
+.hero {
+  margin-bottom: 9rem;
+  .hero-body {
+    padding-bottom: 0; padding-top: 2rem; margin-bottom: -9rem;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .hero.is-large .hero-body {
+    padding-bottom: 0rem;
+    padding-top: 9rem;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .hero {
+    margin-bottom: 9rem;
+    .hero-body {
+      padding-bottom: 0; padding-top: 9rem; margin-bottom: -9rem;
+    }
+  }
+}
+
 </style>

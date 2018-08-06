@@ -1,7 +1,26 @@
 <template>
   <footer class="footer">
-    <div class="container">
+    <div class="container main">
       <div class="columns">
+        <div class="column is-3">
+          <div class="dropdown is-hoverable">
+            <div class="dropdown-trigger">
+              <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                <span class="icon is-small">
+                  <i class="fas fa-globe" aria-hidden="true"></i>
+                </span>
+                <span>English</span>
+              </button>
+            </div>
+            <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+              <div class="dropdown-content">
+                <div class="dropdown-item">
+                  <p>You can insert <strong>any type of content</strong> within the dropdown menu.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="column is-3">
           <h2><strong>Product Information</strong></h2>
           <ul>
@@ -30,33 +49,6 @@
             <li class="nav-item"><a class="nav-link footer-links__link" href="http://status.phraseapp.com" rel="nofollow" target="_blank">Service Status</a></li>
           </ul>
         </div>
-        <div class="column is-3">
-          <h2><strong>Our Solutions</strong></h2>
-          <div class="dropdown is-hoverable">
-            <div class="dropdown-trigger">
-              <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
-                <span>Hover me</span>
-                <span class="icon is-small">
-        <i class="fas fa-angle-down" aria-hidden="true"></i>
-      </span>
-              </button>
-            </div>
-            <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-              <div class="dropdown-content">
-                <div class="dropdown-item">
-                  <p>You can insert <strong>any type of content</strong> within the dropdown menu.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="content has-text-centered">
-        <p>
-          <a class="icon" href="https://github.com/dansup/bulma-templates">
-            <i class="fa fa-github"></i>
-          </a>
-        </p>
       </div>
     </div>
     <div class="footer-bottom">
@@ -96,6 +88,20 @@
 <style lang="scss">
  .footer {
    padding: 3rem 1.5rem 0rem;
+
+   .main {
+     margin-bottom: 2rem;
+   }
+
+   strong, a  {
+     color: #b0b0b0
+   }
+
+   a {
+     &:hover {
+       color: $primary;
+     }
+   }
 
    .footer-bottom {
      border-top: 1px solid $grey-lighter;
