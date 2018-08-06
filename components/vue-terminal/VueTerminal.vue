@@ -60,7 +60,7 @@ export default {
           startDelay: 600,
           typeDelay: 60,
           lineDelay: 1000,
-          progressBarLength: 40,
+          progressBarLength: 22,
           progressBarCharacter: '█',
           cursorCharacter: '▋'
         }
@@ -193,6 +193,7 @@ export default {
         border-radius: 10px;
         margin: auto;
         position: relative;
+        overflow: hidden;
 
         header {
             background: #EFEFEF;
@@ -223,8 +224,9 @@ export default {
         }
       section {
         &.terminal {
-          min-height: 500px;
+          min-height: 350px;
           padding: .25rem .5rem 0 .5rem;
+          overflow-x: auto;
           div {
             .green {
               color: greenyellow;
@@ -237,6 +239,11 @@ export default {
 
     @media screen and (min-width: 1140px) {
         .terminal-window {
+          section {
+            &.terminal {
+              min-height: 450px;
+            }
+          }
         }
     }
 
